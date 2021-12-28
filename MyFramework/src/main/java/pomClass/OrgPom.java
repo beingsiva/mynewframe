@@ -37,7 +37,7 @@ public class OrgPom {
 	 }
 	 
 	 public void typeAccName() {
-		 accName.sendKeys("sivasakthi");
+		 accName.sendKeys("pppsycho");
 	 }
 	
 	 @FindBy(name="website")
@@ -49,15 +49,15 @@ public class OrgPom {
 	 public void typeWebName() {
 		 webname.sendKeys("okok.com");
 	 }
-	 @FindBy(id="tickersymbol")
+	/* @FindBy(id="tickersymbol")
 	 private WebElement tickersymbol;
 	 
 	 public WebElement gettickersymbol() {
 		 return tickersymbol;
 	 }
 	 public void typetickersymbol() {
-		 tickersymbol.sendKeys("siva");
-	}
+		 tickersymbol.sendKeys("sivacivil");
+	}*/
 	@FindBy(xpath="//img[@alt=\"Select\"]")
 	private WebElement memberof;
 	
@@ -66,7 +66,7 @@ public class OrgPom {
 	}
 
 	public void clickonmemberof() {
-		memberof.click();
+		getmemberof().click();
 	}
 	@FindBy(xpath="//a[text()='mindstree']")
 	private WebElement mindtree;
@@ -76,5 +76,16 @@ public class OrgPom {
 	}
 	public void clickmindtree() {
 		mindtree.click();
+	}
+	
+	@FindBy(name="button")
+	private WebElement savebutton;
+	
+	public WebElement getsavebutton() {
+		return savebutton;
+	}
+	
+	public void clicksave() {
+		savebutton.click();
 	}
 }

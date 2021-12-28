@@ -16,7 +16,7 @@ public class Base_class {
 	public WebDriver driver;
 	crm_pom_login cr = new crm_pom_login(driver);
 	
-	@BeforeMethod
+	@BeforeMethod(groups = {"smokeTest","regressionTest"})
 	public void openApp() throws IOException {
 		driver = new ChromeDriver();
 		crm_pom_login cr = new crm_pom_login(driver);
@@ -30,9 +30,10 @@ public class Base_class {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = {"smokeTest","regressionTest"})
 	public void signout() throws InterruptedException {
 		crm_pom_login cr = new crm_pom_login(driver);
+		Thread.sleep(5000);
 		cr.getsignOut();
 
 	}

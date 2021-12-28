@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="organisationModule.ExReportForTestNgDemo">
+      <class name="organisationModule.CreateOrg">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="aftertest"/>
-          <include name="setuptest"/>
-          <include name="test"/>
+          <include name="createOrg"/>
+          <include name="signout"/>
+          <include name="openApp"/>
         </methods>
-      </class> <!-- organisationModule.ExReportForTestNgDemo -->
+      </class> <!-- organisationModule.CreateOrg -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
