@@ -14,7 +14,14 @@ public class CreateOrg extends Base_class{
 		op.org();
 		op.typeAccName();
 		op.typeWebName();
-	
+		op.typetickersymbol();
+		op.clickonmemberof();
+		wdu.switchWindow(driver, 1);
+		op.clickmindtree();
+		wdu.acceptAlert(driver);
+		driver.close();
+		wdu.switchWindow(driver, 0);
+		
 				
 	}
 }

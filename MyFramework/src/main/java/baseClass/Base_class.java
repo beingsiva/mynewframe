@@ -11,7 +11,6 @@ import generic_Utility.PropertyFileUtility;
 import pomClass.crm_pom_login;
 
 public class Base_class {
-	//public static WebDriver staticDriver;
 	public PropertyFileUtility pf = new PropertyFileUtility();
 	public WebDriverUtility wdu = new WebDriverUtility();
 	public WebDriver driver;
@@ -20,7 +19,6 @@ public class Base_class {
 	@BeforeMethod
 	public void openApp() throws IOException {
 		driver = new ChromeDriver();
-		//staticDriver = driver;
 		crm_pom_login cr = new crm_pom_login(driver);
 		String URL = pf.readDataFromProperty("url");
 		String un = pf.readDataFromProperty("username");
@@ -36,7 +34,6 @@ public class Base_class {
 	public void signout() throws InterruptedException {
 		crm_pom_login cr = new crm_pom_login(driver);
 		cr.getsignOut();
-		//staticDriver.quit();
 
 	}
 

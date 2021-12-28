@@ -2,6 +2,7 @@ package crm_project_WebdriverUtility;
 
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
@@ -121,7 +122,7 @@ public class WebDriverUtility {
     * @param driver
     * @param partialWinTitle
     */
-   public void switchToWindow(WebDriver driver, String partialWinTitle)
+   /*public void switchToWindow(WebDriver driver, String partialWinTitle)
    {
 	   Set<String> window = driver.getWindowHandles();
 	   Iterator<String> it = window.iterator();
@@ -136,6 +137,11 @@ public class WebDriverUtility {
 		   
 	   }
 	   
+   }*/
+   
+   public void switchWindow(WebDriver driver, int num) {
+	   ArrayList<String> arr = new ArrayList<String>(driver.getWindowHandles());
+	   driver.switchTo().window(arr.get(num));
    }
    /**
     * Accept alert 

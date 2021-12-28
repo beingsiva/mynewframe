@@ -49,5 +49,32 @@ public class OrgPom {
 	 public void typeWebName() {
 		 webname.sendKeys("okok.com");
 	 }
+	 @FindBy(id="tickersymbol")
+	 private WebElement tickersymbol;
+	 
+	 public WebElement gettickersymbol() {
+		 return tickersymbol;
+	 }
+	 public void typetickersymbol() {
+		 tickersymbol.sendKeys("siva");
+	}
+	@FindBy(xpath="//img[@alt=\"Select\"]")
+	private WebElement memberof;
+	
+	public WebElement getmemberof() {
+		return memberof;
+	}
 
+	public void clickonmemberof() {
+		memberof.click();
+	}
+	@FindBy(xpath="//a[text()='mindstree']")
+	private WebElement mindtree;
+	
+	public WebElement getmindtree() {
+		return mindtree;
+	}
+	public void clickmindtree() {
+		mindtree.click();
+	}
 }
