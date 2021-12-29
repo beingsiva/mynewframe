@@ -37,7 +37,7 @@ public class OrgPom {
 	 }
 	 
 	 public void typeAccName() {
-		 accName.sendKeys("pppsycho");
+		 accName.sendKeys("pp12psycho");
 	 }
 	
 	 @FindBy(name="website")
