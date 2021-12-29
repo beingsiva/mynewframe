@@ -3,7 +3,10 @@
   <groupId>com.mock.testyantra</groupId>
   <artifactId>MyFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+
+  <profiles>
+  <profile>
+  <id>smokeTest</id>
   <build>
    <plugins>
    <plugin>
@@ -18,6 +21,26 @@
       </plugin>
       </plugins>
       </build>
+      </profile>
+      
+      <profile>
+      <id>regressionTest</id>
+  <build>
+   <plugins>
+   <plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>RegressionTest.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+      </plugins>
+      </build>
+      </profile>
+      </profiles>
       
   <dependencies>
   
