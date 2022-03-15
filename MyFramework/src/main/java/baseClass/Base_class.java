@@ -24,6 +24,7 @@ public class Base_class {
 		String un = pf.readDataFromProperty("username");
 		String pass = pf.readDataFromProperty("password");
 		driver.get(URL);
+		//driver
 		cr.loginToApp(un, pass);
 		cr.loginbtn();
 		driver.manage().window().maximize();
